@@ -1,0 +1,108 @@
+.all{
+    background-color: #16a085;
+    margin:0;
+    padding:0;
+    min-height: 100vh;
+}
+.drum-pad{
+    border-radius: 50%;
+    display: block;
+    border: 1px solid black;
+    text-align: center;
+    background-color: #a03216;
+    color:white;
+}
+.display{
+    display: block;
+    border: 1px solid black;
+    background-color: rgb(66, 66, 66);
+    color:white;
+}
+.container {  display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+      ". leftside button display button1 rightside ."
+      ". leftside button4 button3 button2 rightside ."
+      ". . bottom bottom bottom . .";
+  }
+  
+  .button { grid-area: button; 
+            padding-top: 50%;
+            padding-bottom: 50%;
+            width: 100%;
+  }
+  
+  .display { grid-area: display;
+             padding-top: 50%;
+             padding-bottom: 50%;  
+             text-align: center;   
+             font-size: 30px;       
+}
+  
+  .button1 { grid-area: button1; }
+  
+  .button2 { grid-area: button2; }
+  
+  .button3 { grid-area: button3;
+             padding-top: 50%;
+             padding-bottom: 50%;
+             width: 100%;     
+   }
+  
+  .button4 { grid-area: button4; }
+  
+  .leftside { grid-area: leftside;
+          display: grid;
+          grid-template-rows: 1fr 2fr 1fr;
+          grid-template-areas:
+      ". "
+      "buttonleft"
+      ". ";
+  }
+  .buttonleft { grid-area: buttonleft;
+            padding-top: 50%;
+            padding-bottom: 50%;
+            width: 100%;
+  }
+  .rightside { grid-area: rightside;
+           display: grid;
+           grid-template-rows: 1fr 2fr 1fr;
+           grid-template-areas:
+             ". "
+             "buttonright"
+             ". ";
+  }
+  .buttonright { grid-area: buttonright;
+            padding-left: 50%;
+            padding-right: 50%;
+            height: 100%;
+  }
+  .bottom { grid-area: bottom;
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr 1fr; 
+            grid-template-areas:
+              ". buttonbottomleft buttonbottomright .";
+  }
+  .buttonbottomleft { grid-area: buttonbottomleft;
+            padding-top: 50%;
+            padding-bottom: 50%;
+            width: 100%;
+  }
+  .buttonbottomright { grid-area: buttonbottomright; }
+  
+  
+  html, body , .container {
+    height: 100%;
+    margin: 0;
+  }
+  
+
+  
+  
+  
+  
